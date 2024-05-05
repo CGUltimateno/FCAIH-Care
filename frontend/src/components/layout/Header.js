@@ -33,7 +33,7 @@ function Header() {
         </div>
       </div>
       <div className="header-container">
-              <Link className="header-main header-section" to="/"><h1>STORE</h1></Link>
+              <Link className="header-main header-section" to="/"><h1>FCAIH-Care</h1></Link>
         <ul className='header-section'>
 
           {currentUser && currentUser.role === 'admin' && <li><Link to="/admin">Admin Panel</Link></li>}

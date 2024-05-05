@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\45313\\Documents\\GitHub\\Ecommerce\\backend\\backend.csproj": {}
+    "C:\\Users\\moham\\source\\repos\\FCAIH-Care\\backend\\backend.csproj": {}
   },
   "projects": {
-    "C:\\Users\\45313\\Documents\\GitHub\\Ecommerce\\backend\\backend.csproj": {
+    "C:\\Users\\moham\\source\\repos\\FCAIH-Care\\backend\\backend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\45313\\Documents\\GitHub\\Ecommerce\\backend\\backend.csproj",
+        "projectUniqueName": "C:\\Users\\moham\\source\\repos\\FCAIH-Care\\backend\\backend.csproj",
         "projectName": "backend",
-        "projectPath": "C:\\Users\\45313\\Documents\\GitHub\\Ecommerce\\backend\\backend.csproj",
-        "packagesPath": "C:\\Users\\45313\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\45313\\Documents\\GitHub\\Ecommerce\\backend\\obj\\",
+        "projectPath": "C:\\Users\\moham\\source\\repos\\FCAIH-Care\\backend\\backend.csproj",
+        "packagesPath": "C:\\Users\\moham\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\moham\\source\\repos\\FCAIH-Care\\backend\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\45313\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\moham\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -34,6 +34,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -44,9 +49,21 @@
               "target": "Package",
               "version": "[6.0.15, )"
             },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.29, )"
+            },
             "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
               "target": "Package",
               "version": "[6.0.15, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.29, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[6.0.29, )"
             },
             "Serilog": {
               "target": "Package",
@@ -76,6 +93,24 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.29, 6.0.29]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[6.0.29, 6.0.29]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.29, 6.0.29]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[6.0.29, 6.0.29]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -84,7 +119,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204\\RuntimeIdentifierGraph.json"
         }
       }
     }
