@@ -18,6 +18,14 @@ const addProduct = async (product) => {
   return response.data;
 }
 
+const getProductsByCategory = async (categoryId) => {
+    const response = await axios.get(`${API_URL}?categoryId=${categoryId}`);
+    if (!response.ok) {
+        throw new Error('Failed to fetch products');
+    }
+    const products = response.data;
+    return products;
+};
 const updateProduct = async (productId, product) => {
   const response = await axios.put(`${API_URL}/${productId}`, product);
   return response.data;
@@ -30,8 +38,9 @@ const deleteProduct = async (productId) => {
 
 export default {
   getProducts,
-  getProduct,
-  addProduct,
+    getProduct,
+    addProduct,
+    getProductsByCategory,
   updateProduct,
   deleteProduct
 };

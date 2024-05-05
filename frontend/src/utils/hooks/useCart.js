@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+    import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { addToCart, removeFromCart, updateQuantity, calculateSubtotal, getTotal, applyDiscount, clearCart } from '../../store/reducers/cartSlice';
 import { formatPrice } from './useUtil';
@@ -24,19 +24,19 @@ export const useCart = () => {
     dispatch(addToCart(item));
   };
   
-  const removeFromCartHandler = (itemId, size) => {
-    const item = items.find((item) => item.product.id === itemId && item.size === size); 
-    dispatch(removeFromCart({ product: item.product, size }));
+  const removeFromCartHandler = (itemId) => {
+    const item = items.find((item) => item.product.id === itemId); 
+    dispatch(removeFromCart({ product: item.product }));
   };
   
-  const updateQuantityHandler = (productId, size, newQuantity) => {
+  const updateQuantityHandler = (productId, newQuantity) => {
     if (newQuantity === 0) {
-      const item = items.find((item) => item.product.id === productId && item.size === size);
+      const item = items.find((item) => item.product.id === productId);
       if (item) {
-        dispatch(removeFromCart({ product: item.product, size }));
+        dispatch(removeFromCart({ product: item.product }));
       }
     } else if (newQuantity <= 10) {
-      dispatch(updateQuantity({ productId, size, quantity: newQuantity }));
+      dispatch(updateQuantity({ productId, quantity: newQuantity }));
     }
   };
 

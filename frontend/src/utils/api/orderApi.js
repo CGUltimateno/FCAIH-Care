@@ -14,8 +14,12 @@ const getOrdersByUserId = async (userId) => {
 }
 
 const createOrder = async (order) => {
-  const response = await axios.post(API_URL, order);
-  return response.data;
+    try {
+        const response = await axios.post(API_URL, order);
+        return response.data;
+    } catch (error) {
+        console.error('Failed to create order:', error);
+    }
 }
 
 const updateOrder = async (orderId, order) => {

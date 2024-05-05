@@ -1,10 +1,15 @@
 import React from 'react'
+import { useDispatch } from 'react-redux';
+import { updateOrder } from '../../store/actions/orderActions';
+function OrderTable({ user, selectedOrder }) {
+    const dispatch = useDispatch();
 
-function OrderTable({user, selectedOrder}) {
-    
-      const handleStatusChange = (event) => {
+
+    const handleStatusChange = (event) => {
         const newStatus = parseInt(event.target.value);
-      };
+        const updatedOrder = { ...selectedOrder, status: newStatus };
+        dispatch(updateOrder({ orderId: selectedOrder.id, order: updatedOrder }));
+    };
 
   return (
     <>

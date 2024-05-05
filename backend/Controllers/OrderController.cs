@@ -44,7 +44,8 @@ namespace backend.Controllers
                 return BadRequest("Failed to create Order");
             }
 
-            return Ok();
+            // Return the newly created order
+            return Ok(newOrder);
         }
 
         [HttpPut("{orderId}")]

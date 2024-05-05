@@ -6,7 +6,6 @@ import { formatPrice } from '../../utils/hooks/useUtil';
 
 function CartItem() {
   const { removeFromCart, updateQuantity, items } = useCart();
-    console.log(items)
   return (  
     <>
       {items.map((item) => (
@@ -20,19 +19,19 @@ function CartItem() {
             <div className='cart-item-left'>
               <Link to={`/${item.product.productID}`}><p>{item.product.brand} {item.product.name}</p></Link>
               <p>Quantity: {item.quantity}</p>
-              <a onClick={() => removeFromCart(item.product.id, item.size)}>Remove</a>
+              <a onClick={() => removeFromCart(item.product.id)}>Remove</a>
               </div>
               <div className='cart-item-right'>
                 <p>{formatPrice(item.product.price)}</p>
                 <div className='cart-item-quantity'>
-                  <a onClick={() => updateQuantity(item.product.id, item.size, item.quantity - 1)}>-</a>
+                  <a onClick={() => updateQuantity(item.product.id, item.quantity - 1)}>-</a>
                   <input type="number" value={item.quantity} onChange={(e) => {
                       const newQuantity = parseInt(e.target.value);
                       if (!isNaN(newQuantity)) {
                         updateQuantity(item.product.id, item.size, newQuantity);
                       }
                     }} />
-                    <a onClick={() => updateQuantity(item.product.id, item.size, item.quantity + 1)}>+</a>
+                    <a onClick={() => updateQuantity(item.product.id, item.quantity + 1)}>+</a>
                 </div>
               </div>
           </div>
