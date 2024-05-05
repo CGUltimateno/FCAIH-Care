@@ -27,7 +27,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-This project is a continuation of the legacy code, with improvements and updates made on it along with updating of the database, and usage of the project with updates all across it to suit our project needs.
+This project is a continuation of the legacy code, with improvements and updates made on it along with updating all across the backend and frontend, and usage of the project with updates all across it to suit our project needs.
 
 
 ### Built With
