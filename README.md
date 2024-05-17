@@ -16,19 +16,14 @@
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
-    <li><a href="#previews">Previews</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-This project is a continuation of the legacy code, with improvements and updates made on it along with updating all across the backend and frontend, and usage of the project with updates all across it to suit our project needs.
-
+This project is our third-year final technical project, developed as part of our coursework. It is an e-commerce website where users can purchase medical drugs. The website features separate sections for users and administrators. Users can browse and select products, add products to their cart, proceed to checkout, and place orders. Administrators have the capabilities to add new products, delete users, remove product categories, and update order statuses to keep users informed.
 
 ### Built With
 
